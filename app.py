@@ -7,6 +7,7 @@ from form import AddCafeForm
 import os
 from dotenv import load_dotenv
 
+
 load_dotenv()
 
 app = Flask(__name__)
@@ -20,7 +21,7 @@ class Base(DeclarativeBase):
     pass
 
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///cafes.db"
+# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///cafes.db"
 
 # Create the extension
 db = SQLAlchemy(model_class=Base)
